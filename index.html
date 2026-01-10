@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modista demo</title>
-    <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="main-container">
-        <!-- header -->
+        <!-- ===============HEADER=================== -->
 
         <div class="main-header">
             <p class="header-left">Call Us Free: (+91) 9876-543-210</p>
@@ -30,98 +31,157 @@
             </p>
         </div>
 
-        <!-- Navbar -->
+        <!-- ============ NAVBAR ============= -->
 
-        <div class="main-navbar">
-            <h1>MODISTA</h1>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
 
-            <div class="navbar-items">
-                <div class="dropdown">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        HOME
-                    </button>
+                <!-- ==== Toggle Button for Mobile-nav -->
 
-                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="dropdown shop">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        SHOP
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
 
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        CATEGORIES <span
-                            style="background-color: rgb(98, 151, 121); padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">SALE</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+                <a class="navbar-brand fs-2 fw-semibold" href="#">MODISTA</a>
 
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        PRODUCTS <span
-                            style="background-color: #cb354e; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">HOT</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-
-                <div class="dropdown top-deals">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        TOP DEALS
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ELEMENTS
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Accordian</a></li>
-                        <li><a class="dropdown-item" href="#">Icon Box</a></li>
-                        <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                        <li><a class="dropdown-item" href="#">FAQ <span
-                                    style="background-color: #62977980; border: 1px solid seagreen; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">ask</span></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li><a class="dropdown-item" href="#">Gallery</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-table-list"></i> Tabs <span
-                                    style="background-color:  #cb354e6e; border: 1px solid red; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">New</span></a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
-                        <li><a class="dropdown-item" href="#">About Us</a></li>
-                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categories <span
+                                    style="background-color: #62977980; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">SALE</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products <span
+                                    style="background-color:  #cb354e6e; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">HOT</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Top Deal
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Elements
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Accordian</a></li>
+                                <li><a class="dropdown-item" href="#">Icon Box</a></li>
+                                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                                <li><a class="dropdown-item" href="#">FAQ <span
+                                            style="background-color: #62977980; border: 1px solid seagreen; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">ask</span></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-table-list"></i> Tabs <span
+                                            style="background-color:  #cb354e6e; border: 1px solid red; padding-inline: 8px; border-radius: 5px; color: white; font-size: 14px;">New</span></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+
+                        </li>
+                    </ul>
+                    </li>
 
                     </ul>
+
                 </div>
+
+                <ul class="icons">
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><i class="fa-solid fa-user"></i></li>
+                    <li><i class="fa-solid fa-heart"></i></li>
+                    <li><i class="fa-solid fa-bag-shopping"></i></li>
+                </ul>
+        </nav>
+
+        <!-- ============ hero section carousel ================== -->
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+
             </div>
-            <ul class="icons">
-                <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><i class="fa-solid fa-user"></i></li>
-                <li><i class="fa-solid fa-heart"></i></li>
-                <li><i class="fa-solid fa-bag-shopping"></i></li>
-            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/main-banner-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/main-banner-2.jpg" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-
-
-    </div>
 
 </body>
 
