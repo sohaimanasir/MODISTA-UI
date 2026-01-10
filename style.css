@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-.main-container {
+/* .main-container {
   max-width: 1200px;
   margin: auto;
-}
+} */
 
 :root {
   --global-palette1: #cb354e;
@@ -70,10 +70,22 @@
   }
 }
 
-/* =======CSS FOR NAVBAR====== */
+@media (max-width: 760px) {
+  .main-header {
+    font-size: 14px;
+    height: 30px;
+  }
+}
 
+@media (max-width: 576px) and (min-width: 300px) {
+  .main-header {
+    font-size: 12px;
+  }
+}
+
+/* =======CSS FOR NAVBAR====== */
 .navbar {
-  background-color: var(--global-palette8) !important;
+  background-color: var(--global-palette9) !important;
 }
 
 .navbar .nav-link {
@@ -97,12 +109,16 @@
 
 /* ============ HERO SECTION ====================== */
 
-.carousel-item img {
-  height: 70vh; /* 60% of screen height */
-  object-fit: cover;
+.carousel {
+  margin-top: 30px;
 }
 
-/* Make carousel controls circles and center vertically */
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+  position: relative;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 40px;
@@ -123,23 +139,174 @@
   height: 20px;
 }
 
-/* Default carousel indicators */
-.carousel-indicators button {
-  width: 50px;
-  height: 50px;
+/* Carousel indicators */
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: none;
-  margin: 0 5px;
-  opacity: 0.7;
+  margin: 0 6px;
+
   background-image: none !important;
   background-color: var(--global-palette1) !important;
-  transition: opacity 0.3s, transform 0.3s;
+
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  display: none;
 }
 
 /* Active indicator */
 .carousel-indicators .active {
-  background-color: var(--global-palette1) !important;
-  background-image: none !important;
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.4);
+}
+
+.carousel-content {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .carousel-content {
+    left: 10%;
+  }
+}
+
+@media (max-width: 760px) {
+  .carousel-content {
+    left: 5%;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
+    /* background-color: #cb354e; */
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 2;
+    display: block;
+  }
+
+  .carousel-item img {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 576px) and (min-width: 300px) {
+  .carousel-content > h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .carousel-content > p {
+    font-size: 14px;
+  }
+
+  .carousel-content > button {
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .carousel-item img {
+    /* width: 40vw; */
+    height: 30vh;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .carousel-content {
+    left: 10px;
+  }
+}
+
+/* ============== PRODUCT SECTION =========== */
+
+.product-card > img {
+  width: 50%;
+}
+
+/* ============ DEAL CARDS SECTION ================ */
+
+/* ======== Cards ========== */
+.deal-cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+  margin: 20px 0px;
+  gap: 20px;
+}
+
+.deal-cards-section > div {
+  background-color: #cb354e;
+}
+
+.deal-top {
+  position: relative;
+}
+
+.deal-discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.deal-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.deal-timer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.deal-img > img {
+  width: 100%;
+  background-color: #666666;
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.deal-img:hover .hover-img {
+  opacity: 1;
+}
+
+.deal-card-1:hover .deal-icons {
+  opacity: 1;
+}
+
+.deal-bottom > button {
+  opacity: 0;
+}
+
+.deal-card-1:hover .deal-bottom,
+.deal-bottom > button {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 950px) {
+  .deal-cards-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
